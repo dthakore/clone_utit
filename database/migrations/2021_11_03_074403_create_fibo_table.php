@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateFiboTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('fibo', function (Blueprint $table) {
+            $table->id();
+            $table->string('accountNum');
+            $table->string('email');
+            $table->integer('parent')->nullable();
+            $table->integer('lchild')->nullable();
+            $table->integer('rchild')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->integer('accountGroup')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('fibo');
+    }
+}
