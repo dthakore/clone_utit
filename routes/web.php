@@ -5,7 +5,7 @@ Route::get('/',function () {
         return \redirect('/home');
     }
 
-z    //return view('down');
+    //return view('down');
 });
 // Route::get('/', 'HomeController@index')->name('home');
 Route::get('userVerification/{token}', 'UserVerificationController@approve')->name('userVerification');

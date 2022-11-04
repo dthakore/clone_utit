@@ -38,11 +38,11 @@
                                 </a>
                             @endif
                         </li>
-                        <li class="tx-15">
-                            <a href="#" class="side-menu__itemTop">
-                                <i class="fe fe-help-circle side-menu__icon"></i>
-                                <span class="side-menu__labelTop">Help</span>
-                            </a></li>
+                        {{--<li class="tx-15">--}}
+                            {{--<a href="#" class="side-menu__itemTop">--}}
+                                {{--<i class="fe fe-help-circle side-menu__icon"></i>--}}
+                                {{--<span class="side-menu__labelTop">Help</span>--}}
+                            {{--</a></li>--}}
                     </ol>
                 </div>
             </div>
@@ -59,36 +59,36 @@
                                     <span class=" pulse"></span>
                                 </a>
                                 @if ($host != 'cashback.utradeitrade.com')
-                                    <div class="dropdown-menu">
-                                        @if(!$announcement->isEmpty())
-                                            <div class="menu-header-content text-start border-bottom">
-                                                <div class="d-flex">
-                                                    <h6 class="dropdown-title mb-1 tx-15 font-weight-semibold">
-                                                        Notifications</h6>
-                                                    <!-- <span class="badge badge-pill badge-warning ms-auto my-auto float-end">Mark All Read</span> -->
-                                                </div>
-                                                <p class="dropdown-title-text subtext mb-0 op-6 pb-0 tx-12 ">You
-                                                    have {{$announcement->count()}} unread Notifications</p>
-                                            </div>
-                                            <div class="main-notification-list Notification-scroll">
+                                    {{--<div class="dropdown-menu">--}}
+                                        {{--@if(!$announcement->isEmpty())--}}
+                                            {{--<div class="menu-header-content text-start border-bottom">--}}
+                                                {{--<div class="d-flex">--}}
+                                                    {{--<h6 class="dropdown-title mb-1 tx-15 font-weight-semibold">--}}
+                                                        {{--Notifications</h6>--}}
+                                                    {{--<!-- <span class="badge badge-pill badge-warning ms-auto my-auto float-end">Mark All Read</span> -->--}}
+                                                {{--</div>--}}
+                                                {{--<p class="dropdown-title-text subtext mb-0 op-6 pb-0 tx-12 ">You--}}
+                                                    {{--have {{$announcement->count()}} unread Notifications</p>--}}
+                                            {{--</div>--}}
+                                            {{--<div class="main-notification-list Notification-scroll">--}}
 
-                                                @foreach($announcement as $anc)
-                                                    <a class="d-flex p-3 border-bottom" href="#">
-                                                        <div class="notifyimg heightFix bg-pink">
-                                                            <i class="far fa-envelope-open text-white"></i>
-                                                        </div>
-                                                        <div class="ms-3">
-                                                            <h5 class="notification-label mb-1">{{$anc->alert_text}}</h5>
-                                                            <div class="notification-subtext">{{ date("M d, Y", strtotime($anc->created_at)) }}</div>
-                                                        </div>
-                                                        <div class="ms-auto">
-                                                            <i class="las la-angle-right text-end text-muted"></i>
-                                                        </div>
-                                                    </a>
-                                                @endforeach
+                                                {{--@foreach($announcement as $anc)--}}
+                                                    {{--<a class="d-flex p-3 border-bottom" href="#">--}}
+                                                        {{--<div class="notifyimg heightFix bg-pink">--}}
+                                                            {{--<i class="far fa-envelope-open text-white"></i>--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="ms-3">--}}
+                                                            {{--<h5 class="notification-label mb-1">{{$anc->alert_text}}</h5>--}}
+                                                            {{--<div class="notification-subtext">{{ date("M d, Y", strtotime($anc->created_at)) }}</div>--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="ms-auto">--}}
+                                                            {{--<i class="las la-angle-right text-end text-muted"></i>--}}
+                                                        {{--</div>--}}
+                                                    {{--</a>--}}
+                                                {{--@endforeach--}}
 
-                                            </div>
-                                    @endif
+                                            {{--</div>--}}
+                                    {{--@endif--}}
                                     <!-- <div class="dropdown-footer">
                                                                                 <a class="btn btn-primary btn-sm btn-block" href="https://laravel8.spruko.com/nowa/mail">VIEW ALL</a>
                                                                         </div> -->
@@ -99,22 +99,22 @@
                     </div>
                 </div>
             </div>
-            @if($host != 'cashback.utradeitrade.com')
-                @php
-                    $total_qty = \App\Models\Cart::where(['user_id' => auth()->user()->id])->sum('product_qty');
-                    $platform_product = \App\Models\Product::where('sku', 'NTTP1')->first();
-        if(!empty($platform_product->id)) {
-        $platform_cart = \App\Models\Cart::where(['user_id' => auth()->user()->id, 'product_id' => $platform_product->id])->first();
-        if (!empty($platform_cart->cart_id)) {
-            $total_qty = $total_qty - $platform_cart->product_qty + 1;
-        }
-        }
-                @endphp
-                <a class="side-menu__item utit_cart_icon " href="{{ route('frontend.order.cart') }}">
-                    <i class="fe fe-shopping-cart tx-40 cart-badge" id="cart-quantity" style="font-size:20px;padding: 0"
-                       value={{$total_qty}}></i>
-                </a>
-            @endif
+            {{--@if($host != 'cashback.utradeitrade.com')--}}
+                {{--@php--}}
+                    {{--$total_qty = \App\Models\Cart::where(['user_id' => auth()->user()->id])->sum('product_qty');--}}
+                    {{--$platform_product = \App\Models\Product::where('sku', 'NTTP1')->first();--}}
+        {{--if(!empty($platform_product->id)) {--}}
+        {{--$platform_cart = \App\Models\Cart::where(['user_id' => auth()->user()->id, 'product_id' => $platform_product->id])->first();--}}
+        {{--if (!empty($platform_cart->cart_id)) {--}}
+            {{--$total_qty = $total_qty - $platform_cart->product_qty + 1;--}}
+        {{--}--}}
+        {{--}--}}
+                {{--@endphp--}}
+                {{--<a class="side-menu__item utit_cart_icon " href="{{ route('frontend.order.cart') }}">--}}
+                    {{--<i class="fe fe-shopping-cart tx-40 cart-badge" id="cart-quantity" style="font-size:20px;padding: 0"--}}
+                       {{--value={{$total_qty}}></i>--}}
+                {{--</a>--}}
+            {{--@endif--}}
 
             <div class="app-sidebar__toggle" data-bs-toggle="sidebar">
                 <a class="open-toggle" href="javascript:void(0);"><i class="header-icon fe fe-align-left"></i></a>

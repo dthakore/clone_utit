@@ -21,9 +21,9 @@
                                 <!-- Demo content-->
                                 <div class="main-card-signin d-md-flex">
                                     <div class="wd-100p">
-                                        <div class="d-flex mb-4">
-                                            <a href="/"><img src="{{ asset(env('PUXEO_URL')) }}" alt="Logo"  class="sign-favicon" width="130px;" /></a>
-                                        </div>
+                                        {{--<div class="d-flex mb-4">--}}
+                                            {{--<a href="/"><img src="{{ asset(env('PUXEO_URL')) }}" alt="Logo"  class="sign-favicon" width="130px;" /></a>--}}
+                                        {{--</div>--}}
                                         @if(isset($messages))
                                             <p class="alert alert-info">
                                                 {!! $messages !!}
