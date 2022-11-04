@@ -75,27 +75,27 @@
                         <svg xmlns="http://www.w3.org/2000/svg"  class="side-menu__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"/></svg><span class="side-menu__label">{{ __('Dashboard') }}</span>
                     </a>
                 </li>--}}
-                <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('frontend.shop') ? 'active' : '' }}" href="{{ route('frontend.shop') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg"  class="side-menu__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M20 7h-1.209A4.92 4.92 0 0 0 19 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zm-4.5-3c.827 0 1.5.673 1.5 1.5C17 7 16.374 7 16 7h-2.478c.511-1.576 1.253-3 1.978-3zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8c-.374 0-1 0-1-1.5zM4 9h7v2H4V9zm2 11v-7h5v7H6zm12 0h-5v-7h5v7zm-5-9V9.085L13.017 9H20l.001 2H13z"/></svg><span class="side-menu__label">{{ __('Marketplace') }}</span>
-                    </a>
-                </li>
-                <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('follow-expert') ? 'active' : '' }}"  href="{{ route('frontend.expert') }}">
-                        <i class="fe fe-user-check side-menu__icon1 "></i>
-                        <span class="side-menu__label"> &nbsp;&nbsp;Follow Expert</span>
-                    </a>
-                </li>
+                {{--<li class="slide">--}}
+                    {{--<a class="side-menu__item {{ request()->routeIs('frontend.shop') ? 'active' : '' }}" href="{{ route('frontend.shop') }}">--}}
+                        {{--<svg xmlns="http://www.w3.org/2000/svg"  class="side-menu__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M20 7h-1.209A4.92 4.92 0 0 0 19 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zm-4.5-3c.827 0 1.5.673 1.5 1.5C17 7 16.374 7 16 7h-2.478c.511-1.576 1.253-3 1.978-3zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8c-.374 0-1 0-1-1.5zM4 9h7v2H4V9zm2 11v-7h5v7H6zm12 0h-5v-7h5v7zm-5-9V9.085L13.017 9H20l.001 2H13z"/></svg><span class="side-menu__label">{{ __('Marketplace') }}</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="slide">--}}
+                    {{--<a class="side-menu__item {{ request()->routeIs('follow-expert') ? 'active' : '' }}"  href="{{ route('frontend.expert') }}">--}}
+                        {{--<i class="fe fe-user-check side-menu__icon1 "></i>--}}
+                        {{--<span class="side-menu__label"> &nbsp;&nbsp;Follow Expert</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
                 {{--<li class="slide">
                     <a class="side-menu__item {{ request()->routeIs('frontend.social') ? 'active' : '' }}" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg"  class="side-menu__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M2.002 9.63c-.023.411.207.794.581.966l7.504 3.442 3.442 7.503c.164.356.52.583.909.583l.057-.002a1 1 0 0 0 .894-.686l5.595-17.032c.117-.358.023-.753-.243-1.02s-.66-.358-1.02-.243L2.688 8.736a1 1 0 0 0-.686.894zm16.464-3.971-4.182 12.73-2.534-5.522a.998.998 0 0 0-.492-.492L5.734 9.841l12.732-4.182z"/></svg><span class="side-menu__label">{{ __('Socials') }}</span>
                     </a>
                 </li>--}}
-                <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('frontend.affiliate') ? 'active' : '' }}" href="{{ route('frontend.affiliate') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg"  class="side-menu__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11-6h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 6h-4V5h4v4zm-9 4H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6H5v-4h4v4zm8-6c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"/></svg><span class="side-menu__label"> {{ __('My Referrals') }}</span>
-                    </a>
-                </li>
+                {{--<li class="slide">--}}
+                    {{--<a class="side-menu__item {{ request()->routeIs('frontend.affiliate') ? 'active' : '' }}" href="{{ route('frontend.affiliate') }}">--}}
+                        {{--<svg xmlns="http://www.w3.org/2000/svg"  class="side-menu__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11-6h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 6h-4V5h4v4zm-9 4H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6H5v-4h4v4zm8-6c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"/></svg><span class="side-menu__label"> {{ __('My Referrals') }}</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
 
                 @can('bot_management_access')
                 {{--
@@ -118,9 +118,9 @@
                         {{--<li class="side-menu__label1"><a href="javascript:void(0);">My Account</a></li>--}}
                         <li><a class="slide-item {{ request()->is("profile*") ? "active" : "" }}" href="{{ route('frontend.profile.index') }}">My Profile</a></li>
                         {{--<li><a class="slide-item {{ request()->is("account*") ? "active" : "" }}" href="{{ route('frontend.account',['id' => base64_encode(auth()->user()->id)]) }}">My Account</a></li>--}}
-                        <li><a class="slide-item {{ request()->is("order*") ? "active" : "" }}" href="{{ route('frontend.order') }}">My Orders</a></li>
-                        <li><a class="slide-item {{ request()->is("license*") ? "active" : "" }}" href="{{ route('frontend.license') }}">My Licenses</a></li>
-                        <li><a class="slide-item {{ request()->is("document*") ? "active" : "" }}" href="{{ route('frontend.documents') }}">My documents</a></li>
+                        {{--<li><a class="slide-item {{ request()->is("order*") ? "active" : "" }}" href="{{ route('frontend.order') }}">My Orders</a></li>--}}
+                        {{--<li><a class="slide-item {{ request()->is("license*") ? "active" : "" }}" href="{{ route('frontend.license') }}">My Licenses</a></li>--}}
+                        {{--<li><a class="slide-item {{ request()->is("document*") ? "active" : "" }}" href="{{ route('frontend.documents') }}">My documents</a></li>--}}
                         {{--<li><a class="slide-item {{ request()->is("wallet*") ? "active" : "" }}" href="{{ route('frontend.wallet') }}">My Wallet</a></li>--}}
                         {{--<li><a class="slide-item {{ request()->is("password*") ? "active" : "" }}" href="{{ route('frontend.password') }}">Change Password</a></li>--}}
                         @if (auth()->user()->is_admin)
